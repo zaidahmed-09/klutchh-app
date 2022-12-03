@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Klutchh</string>
+     <string moduleConfig="true" name="CodePushDeploymentKey">Nob8hDv0gSAtLZu6JTvN6KvrAgFU4EETSUKIt</string>
+</resources>
