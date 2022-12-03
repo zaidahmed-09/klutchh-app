@@ -1,3 +1,4 @@
+import React from 'react'
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { CalcTime } from "./CalcTime";
 import Live from "./Live";

@@ -10,6 +10,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 //import messaging from '@react-native-firebase/messaging';
 
+import codePush from "react-native-code-push";
+
 LogBox.ignoreAllLogs(true)
 
 LogBox.ignoreLogs([
@@ -65,7 +67,7 @@ const App = () => {
     )
 }
 
-export default App
+export default codePush(App)
 
 
 // import React from 'react'
