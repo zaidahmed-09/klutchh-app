@@ -52,8 +52,8 @@ export default function LandingScreen({navigation}) {
                     </View>
 
                     <GlobalButton 
-                        //onPress={handleButton}
-                        onPress={()=>navigation.navigate("Signup",{isRefernal: false,})}
+                        onPress={handleButton}
+                        //onPress={()=>navigation.navigate("Signup",{isRefernal: false,})}
                         >
                             <TextWhite style={{fontFamily:"Inter-Bold", fontSize:16 }} >
                             REGISTER
