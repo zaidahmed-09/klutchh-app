@@ -13,6 +13,7 @@ import messaging from '@react-native-firebase/messaging';
 import codePush from "react-native-code-push";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+
 LogBox.ignoreAllLogs(true)
 
 LogBox.ignoreLogs([
@@ -25,6 +26,7 @@ const App = () => {
     const queryClient = new QueryClient();
 
     useEffect(() => {
+
 
         if (requestUserPermission()) {
             getToken()
@@ -46,7 +48,7 @@ const App = () => {
 
     const getToken = async () => {
         let fcmToken = await AsyncStorage.getItem('fcmToken');
-        if (!fcmToken) {
+        if (fcmToken == null) {
             messaging()
                 .getToken()
                 .then((fcmToken) => {
@@ -68,21 +70,3 @@ const App = () => {
 }
 
 export default codePush(App)
-
-
-// import React from 'react'
-// import { View, Text, StyleSheet, Dimensions, TouchableOpacity, } from 'react-native'
-// import codePush from "react-native-code-push";
-
-
-// const App = () => {
-//     return (
-//         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}} >
-//             <View style={{height: 100, width: 300, alignItems:'center', justifyContent: 'center', backgroundColor: 'green'}} >
-//                 <Text>OTA Testing  done 1 2 3 . . . . </Text>
-//             </View>
-//         </View>
-//     )
-// }
-
-// export default codePush(App)
